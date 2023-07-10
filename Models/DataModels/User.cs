@@ -15,5 +15,5 @@ public class User : BaseEntity
 
     [Required]
     public string Password { get; set; } = string.Empty;
-    
+        
 }

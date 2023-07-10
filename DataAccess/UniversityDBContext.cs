@@ -10,8 +10,11 @@ public class UniversityDBContext : DbContext
 
     }
     
-    public DbSet<User> Users {get; set;}
-    public DbSet<Curso> Cursos {get; set;}
+    public DbSet<User>? Users {get; set;}
+    public DbSet<Course>? Course {get; set;}
+    public DbSet<Category>? Category {get; set;}
+    public DbSet<Student>? Student {get; set;}
+    public DbSet<Chapter>? Chapters {get; set;}
     
 }
 

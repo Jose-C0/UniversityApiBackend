@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "c:\\open-bootcamp\\UniversityApiBackend\\UniversityApiBackend.csproj": {}
+    "C:\\open-bootcamp\\UniversityApiBackend\\UniversityApiBackend.csproj": {}
   },
   "projects": {
-    "c:\\open-bootcamp\\UniversityApiBackend\\UniversityApiBackend.csproj": {
+    "C:\\open-bootcamp\\UniversityApiBackend\\UniversityApiBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\open-bootcamp\\UniversityApiBackend\\UniversityApiBackend.csproj",
+        "projectUniqueName": "C:\\open-bootcamp\\UniversityApiBackend\\UniversityApiBackend.csproj",
         "projectName": "UniversityApiBackend",
-        "projectPath": "c:\\open-bootcamp\\UniversityApiBackend\\UniversityApiBackend.csproj",
-        "packagesPath": "C:\\Users\\jose\\.nuget\\packages\\",
-        "outputPath": "c:\\open-bootcamp\\UniversityApiBackend\\obj\\",
+        "projectPath": "C:\\open-bootcamp\\UniversityApiBackend\\UniversityApiBackend.csproj",
+        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
+        "outputPath": "C:\\open-bootcamp\\UniversityApiBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\jose\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

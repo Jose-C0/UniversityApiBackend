@@ -12,55 +12,55 @@ namespace UniversityApiBackend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CursoController : ControllerBase
+    public class CategorysController : ControllerBase
     {
         private readonly UniversityDBContext _context;
 
-        public CursoController(UniversityDBContext context)
+        public CategorysController(UniversityDBContext context)
         {
             _context = context;
         }
 
-        // GET: api/Curso
+        // GET: api/Categorys
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Curso>>> GetCursos()
+        public async Task<ActionResult<IEnumerable<Category>>> GetCategory()
         {
-          if (_context.Cursos == null)
+          if (_context.Category == null)
           {
               return NotFound();
           }
-            return await _context.Cursos.ToListAsync();
+            return await _context.Category.ToListAsync();
         }
 
-        // GET: api/Curso/5
+        // GET: api/Categorys/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Curso>> GetCurso(int id)
+        public async Task<ActionResult<Category>> GetCategory(int id)
         {
-          if (_context.Cursos == null)
+          if (_context.Category == null)
           {
               return NotFound();
           }
-            var curso = await _context.Cursos.FindAsync(id);
+            var category = await _context.Category.FindAsync(id);
 
-            if (curso == null)
+            if (category == null)
             {
                 return NotFound();
             }
 
-            return curso;
+            return category;
         }
 
-        // PUT: api/Curso/5
+        // PUT: api/Categorys/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCurso(int id, Curso curso)
+        public async Task<IActionResult> PutCategory(int id, Category category)
         {
-            if (id != curso.Id)
+            if (id != category.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(curso).State = EntityState.Modified;
+            _context.Entry(category).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace UniversityApiBackend.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CursoExists(id))
+                if (!CategoryExists(id))
                 {
                     return NotFound();
                 }
@@ -81,45 +81,44 @@ namespace UniversityApiBackend.Controllers
             return NoContent();
         }
 
-        // POST: api/Curso
+        // POST: api/Categorys
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Curso>> PostCurso(Curso curso)
+        public async Task<ActionResult<Category>> PostCategory(Category category)
         {
-          if (_context.Cursos == null)
+          if (_context.Category == null)
           {
-              return Problem("Entity set 'UniversityDBContext.Cursos'  is null.");
+              return Problem("Entity set 'UniversityDBContext.Category'  is null.");
           }
-            _context.Cursos.Add(curso);
+            _context.Category.Add(category);
             await _context.SaveChangesAsync();
 
-            // return CreatedAtAction("GetCurso", new { id = curso.Id }, curso);
-            return CreatedAtAction(nameof(GetCurso), new { id = curso.Id }, curso);
+            return CreatedAtAction("GetCategory", new { id = category.Id }, category);
         }
 
-        // DELETE: api/Curso/5
+        // DELETE: api/Categorys/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCurso(int id)
+        public async Task<IActionResult> DeleteCategory(int id)
         {
-            if (_context.Cursos == null)
+            if (_context.Category == null)
             {
                 return NotFound();
             }
-            var curso = await _context.Cursos.FindAsync(id);
-            if (curso == null)
+            var category = await _context.Category.FindAsync(id);
+            if (category == null)
             {
                 return NotFound();
             }
 
-            _context.Cursos.Remove(curso);
+            _context.Category.Remove(category);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool CursoExists(int id)
+        private bool CategoryExists(int id)
         {
-            return (_context.Cursos?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Category?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
