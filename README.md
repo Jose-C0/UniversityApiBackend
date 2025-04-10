@@ -16,7 +16,7 @@ El proyecto tiene como objetivo gestionar entidades relacionadas con una univers
 - **ASP.NET Core**: Para construir la API REST.
 - **Entity Framework Core**: Para interactuar con la base de datos.
 - **SQL Server**: Probablemente como base de datos.
-- **Humanizer**: Una biblioteca para manipular y formatear texto.
+
 
 ### Relaciones entre Entidades
 
